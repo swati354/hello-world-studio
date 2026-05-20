@@ -2,7 +2,7 @@
 
 A simple "Hello World" application built with React, TypeScript, and the UiPath SDK. This project demonstrates the basic setup and structure for creating UiPath Coded Web Applications.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/swati354/hello-world-studio)
 
 ## Features
 
@@ -144,7 +144,7 @@ bun run preview
 
 This project is configured for deployment to Cloudflare Pages.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/swati354/hello-world-studio)
 
 #### Manual Deployment
 
