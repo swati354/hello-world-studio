@@ -28,11 +28,11 @@ function SignInGate() {
   }
 
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-2xl font-semibold">UiPath Coded Web App</h1>
-      <p className="mt-2 text-sm text-gray-600">
-        Replace this placeholder with your application UI.
-      </p>
+    <main className="flex min-h-screen items-center justify-center bg-gray-50">
+      <div className="rounded-2xl bg-white px-12 py-10 shadow-md text-center">
+        <h1 className="text-4xl font-bold text-gray-900">Hello, World!</h1>
+        <p className="mt-3 text-gray-500">Welcome to your UiPath Coded Web App.</p>
+      </div>
     </main>
   );
 }
