@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { AuthProvider, useAuth } from '@/hooks/useAuth';
-import { WeatherPage } from './components/WeatherPage';
+import { CalculatorPage } from './components/CalculatorPage';
 
-type Page = 'home' | 'weather';
+type Page = 'home' | 'calculator';
 
 function Nav({ page, setPage }: { page: Page; setPage: (p: Page) => void }) {
   return (
@@ -11,22 +11,18 @@ function Nav({ page, setPage }: { page: Page; setPage: (p: Page) => void }) {
         <button
           onClick={() => setPage('home')}
           className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-            page === 'home'
-              ? 'bg-gray-900 text-white'
-              : 'text-gray-600 hover:bg-gray-100'
+            page === 'home' ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
           Home
         </button>
         <button
-          onClick={() => setPage('weather')}
+          onClick={() => setPage('calculator')}
           className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-            page === 'weather'
-              ? 'bg-gray-900 text-white'
-              : 'text-gray-600 hover:bg-gray-100'
+            page === 'calculator' ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
-          Weather
+          Calculator
         </button>
       </div>
     </nav>
@@ -71,15 +67,15 @@ function SignInGate() {
               <h1 className="text-4xl font-bold text-gray-900">Hello, World!</h1>
               <p className="mt-3 text-gray-500">Welcome to your UiPath Coded Web App.</p>
               <button
-                onClick={() => setPage('weather')}
-                className="mt-6 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-xl text-sm font-medium transition-colors"
+                onClick={() => setPage('calculator')}
+                className="mt-6 px-4 py-2 bg-gray-900 hover:bg-gray-700 text-white rounded-xl text-sm font-medium transition-colors"
               >
-                Check the weather →
+                Open Calculator →
               </button>
             </div>
           </main>
         )}
-        {page === 'weather' && <WeatherPage />}
+        {page === 'calculator' && <CalculatorPage />}
       </div>
     </>
   );
